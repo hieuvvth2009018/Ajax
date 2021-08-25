@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/Ajax',[\App\Models\Ajax::class,'display']);
+Route::post('/Ajax',[\App\Models\Ajax::class,'save']);
